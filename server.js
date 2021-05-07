@@ -50,7 +50,10 @@ io.on("connection", (socket) => {
 // });
 
 mongoose
-  .connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.DBURL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(
     () => {
       console.log("MongoDB connection successful");
