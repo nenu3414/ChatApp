@@ -59,12 +59,12 @@
         );
       }
       function getMessages() {
-        $.get("http://localhost:3000/messages", (data) => {
+        $.get("https://agile-castle-26115.herokuapp.com/messages", (data) => {
           data.forEach(addMessage);
         });
       }
       function postMessage(message) {
-        $.post("http://localhost:3000/messages", message);
+        $.post("https://agile-castle-26115.herokuapp.com/messages", message);
       }
     </script>
   </body>
